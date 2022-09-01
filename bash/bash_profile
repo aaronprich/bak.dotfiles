@@ -1,0 +1,10 @@
+# console coloring for kool kids
+export PS1="\[\e[38;5;12m\]\u\[\e[38;5;11m\]@\[\e[38;5;14m\]\h \[\e[38;5;9m\]\w \[\033[0m\]$ "
+
+# impersonate a user
+alias user="su -ls /bin/bash"/
+
+#if [ -f ~/.bashrc ]; then
+#  source ~/.bashrc
+#fi
+source ~/.bash_aliases

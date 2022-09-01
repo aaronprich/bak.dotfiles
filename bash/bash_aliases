@@ -1,0 +1,95 @@
+# Change Directories
+alias .='cd ..'
+alias ..='cd ../..'
+alias …='cd ../../..'
+alias ….='cd ../../../..'
+alias …..='cd ../../../../..'
+#	OR	#
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# Git commands
+alias gs='git status'
+alias gl='git log'
+alias ga="git add"
+alias gca="git commit -a"
+
+# History commands
+alias h="history"
+alias h1="history 10"
+alias h2="history 20"
+alias h3="history 30"
+alias hgrep="history | grep"
+
+# List commands
+alias l="ls --color=auto"
+alias l='ls -lAh --color=auto'
+alias ls="ls -a --color=auto"
+alias la="ls -a --color=auto"
+alias ll="ls -al --color=auto"
+
+# Ping Commands
+alias pg="ping google.com -c 5"
+alias pt="ping facebook.com -c 5"
+alias ping="ping -c 5"
+alias fastping="ping -c 100 -s.2"
+
+# Confirmation
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias rm='rm -I --preserve-root'
+
+# Show open ports
+alias ports='sudo netstat -tulanp'
+
+# Get top process eating memory
+alias psmem="ps auxf | sort -nr -k 4"
+alias psmem10="ps auxf | sort -nr -k 4 | head -10"
+
+# Get top process eating cpu
+alias pscpu="ps auxf | sort -nr -k 3"
+alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
+
+# Resume wget by default
+alias wget="wget -c"
+
+# Grabs the disk usage in the current directory
+alias usage='du -ch | grep total'
+
+# Gets the total disk usage on your machine
+alias totalusage='df -hl --total | grep total'
+
+# Gives you what is using the most space. Both directories and files. Varies on current directory
+alias most='du -hsx * | sort -rh | head -10'
+
+# other
+alias c="clear"
+
+# Docker
+alias di='docker images'
+alias dr='docker run'
+alias dp='docker ps'
+alias dpa="docker ps -a"
+alias drmi="docker rmi"
+alias drm="docker rm"
+
+# Make directory and parent directories
+alias mkdir='mkdir -p -v'
+# Get representation of underlying files and folders as a tree.
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+# useful Docker functions
+
+dock-exec() { sudo docker exec -i -t $@ /bin/bash ;}
+dock-log() { sudo docker logs –tail=all -f $@ ;}
+dock-ip() { sudo docker inspect –format ‘’ $@ ;}
+dock-stop() { sudo docker stop $(docker ps -a -q); }
+
+# custom navigation
+alias dot='cd ~/dotfiles'
+alias dotb='cd ~/dotfiles/bash'
+alias ad='cd /mnt/user/appdata'
+
