@@ -1,0 +1,7 @@
+{
+    "better-comments.highlightPlainText": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleAttributePerLine": true,
+    "prettier.singleQuote": true,
+    "prettier.useTabs": true
+}
