@@ -1,5 +1,9 @@
+# If not running interactively, don't do anything
+
+[ -z "$PS1" ] && return
 files_to_source=("~/.bash_aliases" "~/.bashrc_prompt")
 
+# Source Files
 for file_to_source in ${files_to_source[@]}
 do 
     if [ -f "$file_to_source" ];
